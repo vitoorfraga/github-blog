@@ -17,7 +17,11 @@ export const GlobalStyles = createGlobalStyle`
 
   body, input, textarea, button {
     font: 400 1rem 'Nunito', sans-serif;
-    
+  }
+
+  :focus {
+    outline: none;
+    box-shadow: 0 0 0 1px  ${(props) => props.theme.blue} !important;
   }
 
 `
