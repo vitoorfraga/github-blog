@@ -5,7 +5,6 @@ import { searchAPI } from '../../lib/axios'
 import Post from './components/Post'
 import { SearchForm } from './components/SearchForm'
 import { PostsContainer } from './styles'
-import { dateFormatter } from '../../utils/formmater'
 import { formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
