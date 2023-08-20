@@ -4,7 +4,10 @@ import { LoaderContainer } from './styles'
 export function Loader() {
   return (
     <LoaderContainer>
-      <img src={loaderIcon} />
+      <img
+        src={loaderIcon}
+        alt="Componente que representa que o elemento está sendo renderizado"
+      />
     </LoaderContainer>
   )
 }
