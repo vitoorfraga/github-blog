@@ -4,11 +4,17 @@ export interface PostProps {
   title: string
   createdAt?: string
   description: string
+  url: string
 }
 
-export default function Post({ title, createdAt, description }: PostProps) {
+export default function Post({
+  title,
+  createdAt,
+  description,
+  url,
+}: PostProps) {
   return (
-    <PostContainer>
+    <PostContainer to={url}>
       <PostHeader>
         <h2>{title}</h2>
         <time>{createdAt}</time>

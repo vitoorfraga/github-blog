@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
 
-export const PostContainer = styled.div`
+export const PostContainer = styled(Link)`
   border-radius: 10px;
   background-color: ${(props) => props.theme['base-post']};
 
@@ -11,6 +12,8 @@ export const PostContainer = styled.div`
     height: 112px;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    color: ${(props) => props.theme['base-text']};
   }
 `
 

@@ -13,16 +13,20 @@ interface Post {
   title: string
   updated_at: string
   body: string
+  number: number
 }
 
 export function Home() {
   const [posts, setPosts] = useState<Post[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
   async function fetchIssues() {
     // const response = await searchAPI.get(`search/issues?q=${'vitoorfraga'}`)
     const response = await searchAPI.get(
       '/search/issues?q=repo:vitoorfraga/github-blog',
     )
+
+    console.log(response)
 
     setPosts(response.data.items)
   }
@@ -35,13 +39,14 @@ export function Home() {
     <>
       <Header />
       <ProfileCard />
-      <SearchForm />
+      <SearchForm count={posts.length} />
 
       <PostsContainer>
         {posts?.map((post: Post) => {
           return (
             <Post
               key={post.id}
+              url={`post/${post.number}`}
               title={post.title}
               description={post.body}
               createdAt={formatDistanceToNow(new Date(post.updated_at), {
