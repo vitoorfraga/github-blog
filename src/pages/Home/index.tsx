@@ -18,7 +18,7 @@ interface Post {
 
 export function Home() {
   const [posts, setPosts] = useState<Post[]>([])
-  const [isLoading, setIsLoading] = useState(true)
+  // const [isLoading, setIsLoading] = useState(true)
 
   async function fetchIssues() {
     // const response = await searchAPI.get(`search/issues?q=${'vitoorfraga'}`)
