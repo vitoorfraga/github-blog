@@ -7,7 +7,7 @@ import { userAPI } from '../../lib/axios'
 import { useEffect, useState } from 'react'
 import SkeletonLoading from '../SkeletonLoading'
 
-interface User {
+export interface User {
   name: string
   followers: number
   githubUsername: string
